@@ -8,7 +8,7 @@ const { notFound, errorHandler } = require("./middleware/errorMiddleware");
 const path = require("path");
 const cors = require("cors");
 const cropAdvisor = require("./api/cropAdvisor");
-const schemes = require("./api/schemes")
+const schemes = require("./api/schemes");
 
 dotenv.config();
 connectDB();
@@ -47,7 +47,8 @@ const server = app.listen(
 const io = require("socket.io")(server, {
   pingTimeout: 60000,
   cors: {
-    origin: "http://localhost:3000",
+    origin: "https://farmstack-4f959.web.app/",
+    // origin: "http://localhost:3000",
     // credentials: true,
   },
 });
